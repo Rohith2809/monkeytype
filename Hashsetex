@@ -1,0 +1,57 @@
+import java.util.HashSet;
+
+public class HashSetDemo {
+    public static void main(String[] args) {
+        // Create a new HashSet
+        HashSet<String> set = new HashSet<>();
+
+        // Add elements to the HashSet
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Orange");
+        set.add("Grapes");
+        set.add("Mango");
+
+        // Print the HashSet
+        System.out.println("HashSet: " + set);
+
+        // Check if an element exists in the HashSet
+        String element = "Apple";
+        if (set.contains(element)) {
+            System.out.println(element + " is found in the HashSet");
+        } else {
+            System.out.println(element + " is not found in the HashSet");
+        }
+
+        // Remove an element from the HashSet
+        String removedElement = "Grapes";
+        boolean removed = set.remove(removedElement);
+        if (removed) {
+            System.out.println(removedElement + " is removed from the HashSet");
+        } else {
+            System.out.println(removedElement + " is not found in the HashSet");
+        }
+
+        // Print the updated HashSet
+        System.out.println("Updated HashSet: " + set);
+
+        // Iterate over the HashSet using a for-each loop
+        System.out.println("Iterating over the HashSet:");
+        for (String item : set) {
+            System.out.println(item);
+        }
+
+        // Get the size of the HashSet
+        System.out.println("Size of the HashSet: " + set.size());
+
+        // Clear the HashSet
+        set.clear();
+
+        // Check if the HashSet is empty
+        if (set.isEmpty()) {
+            System.out.println("HashSet is empty");
+        } else {
+            System.out.println("HashSet is not empty");
+        }
+    }
+}
